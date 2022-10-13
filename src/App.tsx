@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
-import MyForm from './components/MyForm';
+import ImageForm from './components/single_image_form/ImageForm';
+import MultipleImageForm from './components/multiple_image_form/MultipleImageForm';
+import VeryBasicReactForm from './components/VeryBasicReactForm';
 
 function App() {
   const onSubmit = (form: { name: string; description: string }) => {
@@ -9,7 +11,10 @@ function App() {
 
   return (
     <div className='App'>
-      <MyForm onSubmit={onSubmit} />
+      {/* <VeryBasicReactForm onSubmit={onSubmit} /> */}
+      <ImageForm />
+
+      {/* <MultipleImageForm /> */}
     </div>
   );
 }
