@@ -21,7 +21,6 @@ const ImageForm = () => {
       file = e.target.files[0];
       setWorkFile(file);
       let reader = new FileReader(); // new FileReader()는 파일을 담는 통이라고 생각하면 된다
-      console.log(reader);
 
       if (reader && file) {
         // 빈 통에 readAsData로 file의 값을 집어 넣음
@@ -37,8 +36,10 @@ const ImageForm = () => {
     }
   };
 
-  const handleDelete = () => {
-    console.log('hi');
+  const handleDelete: React.MouseEventHandler<HTMLButtonElement> = (e) => {
+    e.preventDefault();
+
+    setWorkPreviewUrl(null);
   };
 
   // const handleDelete:React.MouseEventHandler<HTMLButtonElement> = (e) => {
